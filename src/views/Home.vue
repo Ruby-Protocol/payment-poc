@@ -24,7 +24,7 @@
         <!-- 右部组件 -->
           <div class="right-card">
             <card style="margin: 15px 0px;" v-for="(card,index) in cardList" :key="index"
-            :text="card.text" :content="card.content"
+            :text="card.text" :content="card.content" :logo="card.logo"
             @click.native="selectToken(card.text)"/>
           </div>
         </el-col>
@@ -41,8 +41,9 @@ export default {
     return {
       cardList: [
         {
-          text: 'BNB',
-          content: 'Transfer BNB to pBNB',
+          text: 'ETH',
+          content: 'Transfer ETH to pETH',
+          logo: 'BNB'
         },
         {
           text: 'DAI',
@@ -71,9 +72,10 @@ export default {
       }
       this.$store.commit('setType', text);
       switch(text) {
+          case 'ETH':
           case 'BNB': {
             await this.$switchNetwork()
-              this.$showLoading('init RubyBNBClient...')
+              this.$showLoading('init client...')
               try {
                   await this.$ruby.initRubyEthClient();
                   this.$showLogin()

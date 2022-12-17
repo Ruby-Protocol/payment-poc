@@ -13,10 +13,10 @@
       </el-col>
       <el-col :span="8">
         <div style="margin-top: 15px;">
-          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-if="text == 'BNB'"/>
-          <DAI :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'DAI'"/>
-          <USDT :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'USDT'"/>
-          <RUBY :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'RUBY'"/>
+          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-if="(logo||text) == 'BNB'"/>
+          <DAI :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'DAI'"/>
+          <USDT :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'USDT'"/>
+          <RUBY :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'RUBY'"/>
         </div>
       </el-col>
     </el-row>
@@ -39,6 +39,7 @@ export default {
     };
   },
   props: {
+    logo: String,
     text: String,
     content: String
   },
