@@ -4,7 +4,7 @@
       <el-col :span="8">
         <div class="card card-box" v-for="(info, index) in infos" :key='info.title + index'>
           <div>
-            <BNB :active="true" :fill="defaultColor" v-if="type == 'BNB'"/>
+            <BNB :active="true" :fill="defaultColor" v-if="['BNB','ETH'].includes(type)"/>
             <DAI :fill="defaultColor" v-else-if="type == 'DAI'"/>
             <USDT :fill="defaultColor" v-else-if="type == 'USDT'"/>
             <RUBY :fill="defaultColor" v-else-if="type == 'RUBY'"/>
