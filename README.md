@@ -1,4 +1,4 @@
-# Ruby Protocal Payment
+# Ruby Connect
 
 ### install dependences
 ```
