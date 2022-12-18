@@ -144,6 +144,7 @@ export default {
     async txMint() {
       if (!this.input.mint) return
         switch(this.type) {
+          case 'ETH':
           case 'BNB': {
             await this.$switchNetwork()
               this.$showLoading('In execution...')
@@ -159,6 +160,10 @@ export default {
                   console.error(error)
               }
               this.$hideLoading()
+              break
+          }
+          default: {
+            this.$message('Unsupported cryptocurrency type')
           }
         }
       this.input.mint = ''
@@ -167,6 +172,7 @@ export default {
     async txRedeem() {
       if (!this.input.redeem) return
         switch(this.type) {
+          case 'ETH':
           case 'BNB': {
             await this.$switchNetwork()
               this.$showLoading('In execution...')
@@ -182,6 +188,10 @@ export default {
                   console.errror(error)
               }
               this.$hideLoading()
+              break
+          }
+          default: {
+            this.$message('Unsupported cryptocurrency type')
           }
         }
       this.input.redeem = ''
@@ -201,6 +211,7 @@ export default {
       
       try {
         switch(this.type) {
+          case 'ETH':
           case 'BNB': {
             await this.$switchNetwork()
               this.$showLoading('In execution...')
@@ -216,6 +227,10 @@ export default {
                   console.error(error)
               }
               this.$hideLoading()
+              break
+          }
+          default: {
+            this.$message('Unsupported cryptocurrency type')
           }
         }
         this.input.transfer = ''
