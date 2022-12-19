@@ -4,7 +4,8 @@
       <el-col :span="8">
         <div class="card card-box" v-for="(info, index) in infos" :key='info.title + index'>
           <div>
-            <BNB :active="true" :fill="defaultColor" v-if="['BNB','ETH'].includes(type)"/>
+            <ETH :active="true" :fill="defaultColor" v-if="type == 'ETH'"/>
+            <BNB :active="true" :fill="defaultColor" v-else-if="type == 'BNB'"/>
             <DAI :fill="defaultColor" v-else-if="type == 'DAI'"/>
             <USDT :fill="defaultColor" v-else-if="type == 'USDT'"/>
             <RUBY :fill="defaultColor" v-else-if="type == 'RUBY'"/>
@@ -81,7 +82,7 @@
 <script>
 import { mapState } from 'vuex'
 import {Col, Row} from "element-ui"
-import {BNB, DAI, USDT, RUBY} from "@/components/svg/index.js"
+import {ETH, BNB, DAI, USDT, RUBY} from "@/components/svg/index.js"
 import Button from "@/components/Button.vue"
 import Input from "@/components/Input.vue"
 import Clipboard from 'clipboard'
@@ -94,6 +95,7 @@ export default {
   components: {
     ElCol: Col,
     ElRow: Row,
+    ETH,
     BNB,
     DAI,
     USDT,

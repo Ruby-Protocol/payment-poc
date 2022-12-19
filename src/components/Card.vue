@@ -13,10 +13,11 @@
       </el-col>
       <el-col :span="8">
         <div style="margin-top: 15px;">
-          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-if="(logo||text) == 'BNB'"/>
-          <DAI :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'DAI'"/>
-          <USDT :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'USDT'"/>
-          <RUBY :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="(logo||text) == 'RUBY'"/>
+          <ETH :active="active" :width="iconWidth" :fill="defaultColor" v-if="text == 'ETH'"/>
+          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'BNB'"/>
+          <DAI :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'DAI'"/>
+          <USDT :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'USDT'"/>
+          <RUBY :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'RUBY'"/>
         </div>
       </el-col>
     </el-row>
@@ -28,7 +29,7 @@
 
 <script>
 import {Col, Row} from "element-ui"
-import {BNB, DAI, USDT, RUBY} from "@/components/svg/index.js"
+import {ETH, BNB, DAI, USDT, RUBY} from "@/components/svg/index.js"
 
 export default {
   data() {
@@ -46,6 +47,7 @@ export default {
   components: {
     ElCol: Col,
     ElRow: Row,
+    ETH,
     BNB,
     DAI,
     USDT,

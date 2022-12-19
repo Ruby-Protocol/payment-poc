@@ -42,8 +42,7 @@ export default {
       cardList: [
         {
           text: 'ETH',
-          content: 'Transfer ETH to pETH',
-          logo: 'BNB'
+          content: 'Transfer ETH to pETH'
         },
         {
           text: 'DAI',

@@ -1,3 +1,72 @@
+export let ETH = {
+  template: `
+  <span>
+    <svg v-if="!active" :width="width" :height="height" viewBox="0 0 37 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.416 0L18.014 1.368V41.04L18.416 41.442L36.832 30.556L18.416 0Z" fill="#440008"/>
+      <path d="M18.416 0L0 30.556L18.416 41.442V22.186V0Z" fill="#440008"/>
+      <path d="M18.416 44.928L18.188 45.206V59.338L18.416 60L36.842 34.048L18.416 44.928Z" fill="#440008"/>
+      <path d="M18.416 60V44.928L0 34.048L18.416 60Z" fill="#440008"/>
+      <path d="M18.416 41.442L36.832 30.556L18.416 22.186V41.442Z" fill="#440008"/>
+      <path d="M0 30.556L18.416 41.442V22.186L0 30.556Z" fill="#440008"/>
+    </svg>
+    <svg v-else :width="width" :height="height" viewBox="0 0 37 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.416 0L18.014 1.368V41.04L18.416 41.442L36.832 30.556L18.416 0Z" fill="url(#paint0_linear_5901_33)"/>
+      <path d="M18.416 0L0 30.556L18.416 41.442V22.186V0Z" fill="url(#paint1_linear_5901_33)"/>
+      <path d="M18.416 44.928L18.188 45.206V59.338L18.416 60L36.842 34.048L18.416 44.928Z" fill="url(#paint2_linear_5901_33)"/>
+      <path d="M18.416 60V44.928L0 34.048L18.416 60Z" fill="url(#paint3_linear_5901_33)"/>
+      <path d="M18.416 41.442L36.832 30.556L18.416 22.186V41.442Z" fill="url(#paint4_linear_5901_33)"/>
+      <path d="M0 30.556L18.416 41.442V22.186L0 30.556Z" fill="url(#paint5_linear_5901_33)"/>
+      <defs>
+      <linearGradient id="paint0_linear_5901_33" x1="27.423" y1="11" x2="27.423" y2="41.442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB4C60"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_5901_33" x1="10" y1="7.5" x2="9.208" y2="41.442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFA2AC"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear_5901_33" x1="27.515" y1="43" x2="27.515" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CD1428"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      <linearGradient id="paint3_linear_5901_33" x1="9.208" y1="34.048" x2="9.208" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FA7382"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      <linearGradient id="paint4_linear_5901_33" x1="27.624" y1="22.186" x2="27.624" y2="41.442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0192F"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      <linearGradient id="paint5_linear_5901_33" x1="9.208" y1="22.186" x2="9.208" y2="41.442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EE374B"/>
+      <stop offset="1" stop-color="#FF001D"/>
+      </linearGradient>
+      </defs>
+    </svg>
+  </span>
+  `,
+  props: {
+    fill: {
+      type: String,
+      default: "white"
+    },
+    width: {
+      type: Number,
+      default: 66
+    },
+    active: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    height() {
+      // return this.width / 5 * 6
+      return this.width
+    }
+  }
+}
+
 export let BNB = {
   template: `
   <span>
