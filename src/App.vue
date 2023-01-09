@@ -34,6 +34,7 @@ export default {
     Vue.prototype.$showLogin = this.showLogin
     Vue.prototype.$hideLogin = this.hideLogin
     Vue.prototype.$switchNetwork = this.switchNetwork
+    this.$message('message');
   },
   methods: {
     showLoading(msg) {
@@ -110,8 +111,11 @@ export default {
   font-family: "EXO";
   src: url('./assets/font/Exo-VariableFont_wght.ttf');
 }
+.el-message__content{
+  font-family: EXO !important;
+}
 #app {
-  font-family: PingFangSC;
+  font-family: EXO;
 }
 body,
 html,
