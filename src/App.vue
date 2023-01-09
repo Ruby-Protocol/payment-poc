@@ -34,7 +34,6 @@ export default {
     Vue.prototype.$showLogin = this.showLogin
     Vue.prototype.$hideLogin = this.hideLogin
     Vue.prototype.$switchNetwork = this.switchNetwork
-    this.$message('message');
   },
   methods: {
     showLoading(msg) {
