@@ -62,29 +62,11 @@ export default {
     hideLogin() {
       this.showDialog = false
     },
-    switchNetwork() {
-      // Only BSC Testnet currently
-    //   return window.ethereum.request({
-    //   method: 'wallet_addEthereumChain',
-    //   params: [{
-    //     chainId: "0x61",
-    //     chainName: "BNB Smart Chain Testnet",
-    //     rpcUrls: [
-    //       'https://data-seed-prebsc-1-s3.binance.org:8545/',
-    //     ],
-    //     blockExplorerUrls: [
-    //       'https://testnet.bscscan.com/'
-    //     ],
-    //     nativeCurrency: {
-    //       name: 'tBNB',
-    //       symbol: 'tBNB',
-    //       decimals: 18
-    //     }
-    //   }]
-    // })
-    return window.ethereum.request({
-      method: 'wallet_addEthereumChain',
-      params: [{
+    async switchNetwork(net) {
+
+    let params
+    if(net == 'ETH') {
+      params = [{
         chainId: "0x1a4",
         chainName: "Optimism Goerli",
         rpcUrls: [
@@ -99,6 +81,31 @@ export default {
           decimals: 18
         }
       }]
+    }
+    else if(net == 'Arbitrum') {
+      console.log('select Arbitrum')
+      params = [{
+        chainId: "0x66eed",
+        chainName: "Arbitrum Goerli Testnet",
+        rpcUrls: [
+          'https://goerli-rollup.arbitrum.io/rpc',
+        ],
+        blockExplorerUrls: [
+          'https://goerli.arbiscan.io/'
+        ],
+        nativeCurrency: {
+          name: 'ETH',
+          symbol: 'ETH',
+          decimals: 18
+        }
+      }]
+    }
+    else {
+      return false
+    }
+    return window.ethereum.request({
+      method: 'wallet_addEthereumChain',
+      params
     })
     }
   }

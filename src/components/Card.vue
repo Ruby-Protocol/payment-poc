@@ -13,11 +13,11 @@
       </el-col>
       <el-col :span="8">
         <div style="margin-top: 15px;">
-          <ETH :active="active" :width="iconWidth" :fill="defaultColor" v-if="text == 'ETH'"/>
-          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'BNB'"/>
+          <BNB :active="active" :width="iconWidth" :fill="defaultColor" v-if="text == 'BNB'"/>
           <DAI :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'DAI'"/>
           <USDT :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'USDT'"/>
           <RUBY :active="active" :width="iconWidth" :fill="defaultColor" v-else-if="text == 'RUBY'"/>
+          <ETH :active="active" :width="iconWidth" :fill="defaultColor" v-else/>
         </div>
       </el-col>
     </el-row>

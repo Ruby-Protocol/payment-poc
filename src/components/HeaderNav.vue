@@ -120,7 +120,7 @@ export default {
     },
     connect() {
       console.log('connect')
-      this.initRubyClient()
+      this.initRubyClient('ETH')
     },
       gohome() {
           this.$router.push('/');

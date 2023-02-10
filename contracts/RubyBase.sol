@@ -23,7 +23,7 @@ contract RubyBase {
     uint256 public unit; 
 
     uint256 public round_len = 24; 
-    uint256 public round_base = 0; // 0 for block, 1 for second (usually just for test)
+    uint256 public round_base = 1; // 0 for block, 1 for second (usually just for test)
 
 
     address payable public ruby_agency; 
@@ -248,7 +248,7 @@ contract RubyBase {
                       Utils.G1Point[] memory y, Utils.G1Point memory u, 
                       bytes memory proof) public payable {
 
-        uint256 startGas = gasleft();
+        // uint256 startGas = gasleft();
 
         // TODO: check that sender and receiver should NOT be equal.
         uint256 size = y.length;
@@ -282,15 +282,16 @@ contract RubyBase {
 
         require(ruby_transfer.verify(ruby_stm, ruby_proof), "[Ruby transfer] Failed: verification");
 
-        uint256 usedGas = startGas - gasleft();
+        // uint256 usedGas = startGas - gasleft();
         
-        uint256 fee = (usedGas * transfer_fee_numerator / transfer_fee_denominator) * tx.gasprice;
-        if (fee > 0) {
-            require(msg.value >= fee, "[Ruby transfer] Not enough fee sent with the transfer transaction.");
-            ruby_agency.transfer(fee);
-            transfer_fee_log = transfer_fee_log + fee;
-        }
-        msg.sender.transfer(msg.value - fee);
+        // uint256 fee = (usedGas * transfer_fee_numerator / transfer_fee_denominator) * tx.gasprice;
+        // if (fee > 0) {
+        //     require(msg.value >= fee, "[Ruby transfer] Not enough fee sent with the transfer transaction.");
+        //     ruby_agency.transfer(fee);
+        //     transfer_fee_log = transfer_fee_log + fee;
+        // }
+        // msg.sender.transfer(msg.value - fee);
+        msg.sender.transfer(msg.value);
 
         emit TransferOccurred(y);
     }

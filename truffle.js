@@ -9,15 +9,16 @@ module.exports = {
         development: {
             host: "127.0.0.1",
             port: 8545,
-            network_id: "*" // Match any network id
-        },
-        develop: {
-            host: "127.0.0.1",
-            port: 8545,
+            network_id: "*", // Match any network id
+            // gas: "6721975"
         },
         op: {
             provider: () => new HDWalletProvider(mnemonic, 'https://opt-goerli.g.alchemy.com/v2/dICoHtgdK5GqvGMHv5uagUCAL2Pb02sm'),
             network_id: 420
+        },
+        arbi_testnet: {
+            provider: () => new HDWalletProvider(mnemonic, 'wss://arb-goerli.g.alchemy.com/v2/uGxyKSq6y9FmCLLRpdrbS3Kfgk35UjJL'),
+            network_id: 421613
         },
         heco_testnet: {
             provider: () => new HDWalletProvider(mnemonic, 'https://http-testnet.hecochain.com'),

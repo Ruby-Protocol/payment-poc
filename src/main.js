@@ -68,8 +68,8 @@ const store =  new Vuex.Store({
 })
 
 
-const initRubyClient = () => {
-    rubyApp.init().then( async function() {
+const initRubyClient = (net) => {
+    return rubyApp.init(net).then( async function() {
         // showLoading('connect service...')
         try {
             let accounts = await rubyApp.web3.eth.getAccounts();
@@ -87,7 +87,7 @@ const initRubyClient = () => {
         // hideLoading()
     })
 }
-initRubyClient();
+initRubyClient('ETH');
 
 Vue.prototype.$ruby = rubyApp;
 Vue.prototype.initRubyClient = initRubyClient;

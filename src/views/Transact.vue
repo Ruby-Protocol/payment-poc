@@ -4,11 +4,11 @@
       <el-col :span="8">
         <div class="card card-box" v-for="(info, index) in infos" :key='info.title + index'>
           <div>
-            <ETH :active="true" :fill="defaultColor" v-if="type == 'ETH'"/>
-            <BNB :active="true" :fill="defaultColor" v-else-if="type == 'BNB'"/>
+            <BNB :active="true" :fill="defaultColor" v-if="type == 'BNB'"/>
             <DAI :fill="defaultColor" v-else-if="type == 'DAI'"/>
             <USDT :fill="defaultColor" v-else-if="type == 'USDT'"/>
             <RUBY :fill="defaultColor" v-else-if="type == 'RUBY'"/>
+            <ETH :active="true" :fill="defaultColor" v-else/>
           </div>
           <el-row type="flex" justify="space-between" align="middle" style="width: 100%;">
             <el-col :span="12">
@@ -147,8 +147,9 @@ export default {
       if (!this.input.mint) return
         switch(this.type) {
           case 'ETH':
+          case 'Arbitrum':
           case 'BNB': {
-            await this.$switchNetwork()
+            await this.$switchNetwork(this.type)
               this.$showLoading('In execution...')
               try {
                   await this.$ruby.rubyEthDeposit(this.input.mint)
@@ -175,8 +176,9 @@ export default {
       if (!this.input.redeem) return
         switch(this.type) {
           case 'ETH':
+          case 'Arbitrum':
           case 'BNB': {
-            await this.$switchNetwork()
+            await this.$switchNetwork(this.type)
               this.$showLoading('In execution...')
               try {
                   await this.$ruby.rubyEthWithdraw(this.input.redeem)
@@ -214,8 +216,9 @@ export default {
       try {
         switch(this.type) {
           case 'ETH':
+          case 'Arbitrum':
           case 'BNB': {
-            await this.$switchNetwork()
+            await this.$switchNetwork(this.type)
               this.$showLoading('In execution...')
               try {
                   await this.$ruby.rubyEthTransfer(this.input.remoteAddress, this.input.transfer)

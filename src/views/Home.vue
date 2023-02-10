@@ -44,9 +44,13 @@ export default {
           text: 'ETH',
           content: 'Transfer ETH to pETH'
         },
+        // {
+        //   text: 'DAI',
+        //   content: 'Transfer DAI to pDAI',
+        // },
         {
-          text: 'DAI',
-          content: 'Transfer DAI to pDAI',
+          text: 'Arbitrum',
+          content: 'Transfer Arbi to pArbi',
         },
         {
           text: 'USDT',
@@ -61,21 +65,27 @@ export default {
   },
   methods: {
     async selectToken(text) {
-      if (!this.$ruby.rubyClient) {
-         try {
-             await this.initRubyClient();
-         } catch (error) {
-             this.$message('Connect wallet Error');
-             console.error(error);
-         }
-      }
+      // if (!this.$ruby.rubyClient) {
+      //    try {
+      //        await this.initRubyClient();
+      //    } catch (error) {
+      //        this.$message('Connect wallet Error');
+      //        console.error(error);
+      //    }
+      // }
       this.$store.commit('setType', text);
       switch(text) {
           case 'ETH':
-          case 'BNB': {
-            await this.$switchNetwork()
+          case 'BNB':
+          case 'Arbitrum': {
+            let ok = await this.$switchNetwork(text)
+            if (ok === false) {
+              this.$message('Not Supported!')
+              return
+            }
               this.$showLoading('init client...')
               try {
+                await this.initRubyClient(text)
                   await this.$ruby.initRubyEthClient();
                   this.$showLogin()
               } catch (error) {
