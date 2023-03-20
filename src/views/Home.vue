@@ -9,7 +9,7 @@
             </div>
             <!-- <div class="btn"> -->
             <!-- <a href="https://docs.ruby.network/tutorial/mainnet-configuration" target="blank"> -->
-            <a href="https://docs.ruby.xyz/tutorial/connect-your-wallet" target="_blank">
+            <a href="https://wiki.ruby.xyz/tutorial/connect-your-wallet" target="_blank">
               <!-- <img class="btn" src="../assets/images/check-tutorial.png" alt="" srcset=""> -->
               <div class="check-tutorial">
                 <img class="left border" src="../assets/icon/left.svg" alt="" srcset="">

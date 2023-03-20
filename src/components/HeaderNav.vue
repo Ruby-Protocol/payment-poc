@@ -62,17 +62,17 @@ export default {
         // },
         {
           label: 'Tutorial',
-          link: 'https://docs.ruby.xyz/tutorial/connect-your-wallet'
+          link: 'https://wiki.ruby.xyz/tutorial/connect-your-wallet'
           // link: 'https://docs.ruby.network/tutorial/testnet-configuration'
         },
         {
           label: 'Q&A',
-          link: 'https://docs.ruby.xyz/faqs/faqs'
+          link: 'https://wiki.ruby.xyz/faqs/faqs'
           // link: 'https://docs.ruby.network/mainnet-faqs/testnet-faq'
         },
         {
           label: 'Info',
-          link: 'https://docs.ruby.xyz'
+          link: 'https://wiki.ruby.xyz'
           // link: 'https://docs.ruby.network/'
         }
       ]
