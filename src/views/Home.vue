@@ -25,7 +25,7 @@
           <div class="right-card">
             <card style="margin: 15px 0px;" v-for="(card,index) in cardList" :key="index"
             :text="card.text" :content="card.content" :logo="card.logo"
-            @click.native="selectToken(card.text)"/>
+            @click.native="selectToken(card.net)"/>
           </div>
         </el-col>
       </el-row>
@@ -41,22 +41,26 @@ export default {
     return {
       cardList: [
         {
-          text: 'ETH',
-          content: 'Transfer ETH to pETH'
+          net: 'ETH',
+          text: 'ETH - Optimism',
+          content: 'Transfer opETH to pETH'
         },
         // {
         //   text: 'DAI',
         //   content: 'Transfer DAI to pDAI',
         // },
         {
-          text: 'Arbitrum',
-          content: 'Transfer Arbi to pArbi',
+          net: 'Arbitrum',
+          text: 'ETH - Arbitrum',
+          content: 'Transfer arbETH to pETH',
         },
         {
+          net: 'USDT',
           text: 'USDT',
           content: 'Transfer USDT to pUSDT',
         },
         {
+          net: 'RUBY',
           text: 'RUBY',
           content: 'Transfer RUBY to pRUBY',
         }
