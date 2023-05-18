@@ -62,12 +62,12 @@ export default {
         // },
         {
           label: 'Tutorial',
-          link: 'https://wiki.ruby.xyz/tutorial/connect-your-wallet'
+          link: 'https://rubyprototcol.gitbook.io/ruby-connect/'
           // link: 'https://docs.ruby.network/tutorial/testnet-configuration'
         },
         {
           label: 'Q&A',
-          link: 'https://wiki.ruby.xyz/faqs/faqs'
+          link: 'https://rubyprototcol.gitbook.io/ruby-connect/faq/faq'
           // link: 'https://docs.ruby.network/mainnet-faqs/testnet-faq'
         },
         {
