@@ -2056,6 +2056,10 @@
   version "0.14.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz"
 
+"@socket.io/component-emitter@~3.1.0":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.2.tgz#821f8442f4175d8f0467b9daf26e3a18e2d02af2"
+
 "@soda/friendly-errors-webpack-plugin@^1.8.0":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.8.1.tgz#4d4fbb1108993aaa362116247c3d18188a2c6c85"
@@ -2321,6 +2325,16 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cookie@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.4.1.tgz#bfd02c1f2224567676c1545199f87c3a861d878d"
+
+"@types/cors@^2.8.12":
+  version "2.8.17"
+  resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.17.tgz#5d718a5e494a8166f569d986794e49c48b216b2b"
+  dependencies:
+    "@types/node" "*"
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.7"
   resolved "https://registry.yarnpkg.com/@types/eslint-scope/-/eslint-scope-3.7.7.tgz#3108bd5f18b0cdb277c867b3dd449c9ed7079ac5"
@@ -2417,6 +2431,12 @@
 "@types/node@*", "@types/node@^12.12.6":
   version "12.20.24"
   resolved "https://registry.npmjs.org/@types/node/-/node-12.20.24.tgz"
+
+"@types/node@>=10.0.0":
+  version "20.14.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.6.tgz#f3c19ffc98c2220e18de259bb172dd4d892a6075"
+  dependencies:
+    undici-types "~5.26.4"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2948,10 +2968,6 @@ aes-js@^3.1.1:
   version "3.1.2"
   resolved "https://registry.npmjs.org/aes-js/-/aes-js-3.1.2.tgz"
 
-after@0.8.2:
-  version "0.8.2"
-  resolved "https://registry.npmjs.org/after/-/after-0.8.2.tgz"
-
 ajv-formats@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
@@ -3114,10 +3130,6 @@ array-unique@^0.3.2:
   version "0.3.2"
   resolved "https://registry.npmjs.org/array-unique/-/array-unique-0.3.2.tgz"
 
-arraybuffer.slice@~0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/arraybuffer.slice/-/arraybuffer.slice-0.0.7.tgz"
-
 asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
@@ -3188,13 +3200,19 @@ async-validator@~1.8.1:
   dependencies:
     babel-runtime "6.x"
 
-async@1.5.2, async@^1.4.2:
+async@^1.4.2:
   version "1.5.2"
   resolved "https://registry.npmjs.org/async/-/async-1.5.2.tgz"
 
 async@^2.0.1, async@^2.1.2, async@^2.4.0, async@^2.5.0, async@^2.6.2:
   version "2.6.3"
   resolved "https://registry.npmjs.org/async/-/async-2.6.3.tgz"
+  dependencies:
+    lodash "^4.17.14"
+
+async@^2.6.0:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
   dependencies:
     lodash "^4.17.14"
 
@@ -3663,10 +3681,6 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.npmjs.org/babylon/-/babylon-6.18.0.tgz"
 
-backo2@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/backo2/-/backo2-1.0.2.tgz"
-
 backoff@^2.5.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/backoff/-/backoff-2.5.0.tgz"
@@ -3683,17 +3697,13 @@ base-x@^3.0.2, base-x@^3.0.8:
   dependencies:
     safe-buffer "^5.0.1"
 
-base64-arraybuffer@0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/base64-arraybuffer/-/base64-arraybuffer-0.1.4.tgz"
-
 base64-js@^1.0.2, base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
 
-base64id@2.0.0:
+base64id@2.0.0, base64id@~2.0.0:
   version "2.0.0"
-  resolved "https://registry.npmjs.org/base64id/-/base64id-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/base64id/-/base64id-2.0.0.tgz#2770ac6bc47d312af97a8bf9a634342e0cd25cb6"
 
 base@^0.11.1:
   version "0.11.2"
@@ -3762,10 +3772,6 @@ bl@^4.1.0:
 blakejs@^1.1.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/blakejs/-/blakejs-1.1.1.tgz"
-
-blob@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.npmjs.org/blob/-/blob-0.0.5.tgz"
 
 bluebird@^3.1.1, bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.2:
   version "3.7.2"
@@ -3862,40 +3868,40 @@ brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz"
 
-browser-sync-client@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.npmjs.org/browser-sync-client/-/browser-sync-client-2.27.5.tgz"
+browser-sync-client@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/browser-sync-client/-/browser-sync-client-2.29.3.tgz#9300b97f42abc2c4f95ca29b5a9781b5c492f14a"
   dependencies:
     etag "1.8.1"
     fresh "0.5.2"
     mitt "^1.1.3"
-    rxjs "^5.5.6"
 
-browser-sync-ui@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.npmjs.org/browser-sync-ui/-/browser-sync-ui-2.27.5.tgz"
+browser-sync-ui@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/browser-sync-ui/-/browser-sync-ui-2.29.3.tgz#35e2ce3b470dce6b7219307cac7278bf324a0f16"
   dependencies:
     async-each-series "0.1.1"
+    chalk "4.1.2"
     connect-history-api-fallback "^1"
     immutable "^3"
     server-destroy "1.0.1"
-    socket.io-client "^2.4.0"
+    socket.io-client "^4.4.1"
     stream-throttle "^0.1.3"
 
 browser-sync@^2.26.13:
-  version "2.27.5"
-  resolved "https://registry.npmjs.org/browser-sync/-/browser-sync-2.27.5.tgz"
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.29.3.tgz#c2a3ff00c659eb87a13cae9d7a427e1b4b580ee1"
   dependencies:
-    browser-sync-client "^2.27.5"
-    browser-sync-ui "^2.27.5"
+    browser-sync-client "^2.29.3"
+    browser-sync-ui "^2.29.3"
     bs-recipes "1.3.4"
-    bs-snippet-injector "^2.0.1"
+    chalk "4.1.2"
     chokidar "^3.5.1"
     connect "3.6.6"
     connect-history-api-fallback "^1"
     dev-ip "^1.0.1"
     easy-extender "^2.3.4"
-    eazy-logger "3.1.0"
+    eazy-logger "^4.0.1"
     etag "^1.8.1"
     fresh "^0.5.2"
     fs-extra "3.0.1"
@@ -3904,8 +3910,7 @@ browser-sync@^2.26.13:
     localtunnel "^2.0.1"
     micromatch "^4.0.2"
     opn "5.3.0"
-    portscanner "2.1.1"
-    qs "6.2.3"
+    portscanner "2.2.0"
     raw-body "^2.3.2"
     resp-modifier "6.0.2"
     rx "4.1.0"
@@ -3913,9 +3918,9 @@ browser-sync@^2.26.13:
     serve-index "1.9.1"
     serve-static "1.13.2"
     server-destroy "1.0.1"
-    socket.io "2.4.0"
-    ua-parser-js "^0.7.28"
-    yargs "^15.4.1"
+    socket.io "^4.4.1"
+    ua-parser-js "^1.0.33"
+    yargs "^17.3.1"
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4, browserify-aes@^1.2.0:
   version "1.2.0"
@@ -3995,10 +4000,6 @@ browserslist@^4.16.3, browserslist@^4.21.10, browserslist@^4.21.4, browserslist@
 bs-recipes@1.3.4:
   version "1.3.4"
   resolved "https://registry.npmjs.org/bs-recipes/-/bs-recipes-1.3.4.tgz"
-
-bs-snippet-injector@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/bs-snippet-injector/-/bs-snippet-injector-2.0.1.tgz"
 
 bs58@^4.0.0, bs58@^4.0.1:
   version "4.0.1"
@@ -4202,6 +4203,13 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
+chalk@4.1.2, chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 chalk@^1.1.3:
   version "1.1.3"
   resolved "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz"
@@ -4223,13 +4231,6 @@ chalk@^2.0.0, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.2, chalk@^2.4.2:
 chalk@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
-  dependencies:
-    ansi-styles "^4.1.0"
-    supports-color "^7.1.0"
-
-chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
@@ -4464,20 +4465,20 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-cliui@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/cliui/-/cliui-6.0.0.tgz"
-  dependencies:
-    string-width "^4.2.0"
-    strip-ansi "^6.0.0"
-    wrap-ansi "^6.2.0"
-
 cliui@^7.0.2, cliui@^7.0.4:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
   dependencies:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
+    wrap-ansi "^7.0.0"
+
+cliui@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-8.0.1.tgz#0c04b075db02cbfe60dc8e6cf2f5486b1a3608aa"
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
 clone-deep@^4.0.1:
@@ -4579,21 +4580,9 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz"
 
-component-bind@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/component-bind/-/component-bind-1.0.0.tgz"
-
-component-emitter@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/component-emitter/-/component-emitter-1.2.1.tgz"
-
-component-emitter@^1.2.1, component-emitter@~1.3.0:
+component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.npmjs.org/component-emitter/-/component-emitter-1.3.0.tgz"
-
-component-inherit@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/component-inherit/-/component-inherit-0.0.3.tgz"
 
 compressible@~2.0.16:
   version "2.0.18"
@@ -4781,7 +4770,7 @@ core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz"
 
-cors@^2.8.1:
+cors@^2.8.1, cors@~2.8.5:
   version "2.8.5"
   resolved "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz"
   dependencies:
@@ -5059,17 +5048,11 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   dependencies:
     ms "2.1.2"
 
-debug@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz"
+debug@~4.3.1, debug@~4.3.2, debug@~4.3.4:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
   dependencies:
-    ms "2.0.0"
-
-debug@~4.1.0:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz"
-  dependencies:
-    ms "^2.1.1"
+    ms "2.1.2"
 
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.2.0:
   version "1.2.0"
@@ -5201,10 +5184,6 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-dlv@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz"
-
 dns-packet@^5.2.2:
   version "5.6.1"
   resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-5.6.1.tgz#ae888ad425a9d1478a0674256ab866de1012cf2f"
@@ -5305,11 +5284,11 @@ easy-stack@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/easy-stack/-/easy-stack-1.0.1.tgz#8afe4264626988cabb11f3c704ccd0c835411066"
 
-eazy-logger@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/eazy-logger/-/eazy-logger-3.1.0.tgz"
+eazy-logger@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eazy-logger/-/eazy-logger-4.0.1.tgz#2e9fe487fb14ed6ac20d5f01d90dff377d403041"
   dependencies:
-    tfunk "^4.0.0"
+    chalk "4.1.2"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -5393,42 +5372,34 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-engine.io-client@~3.5.0:
-  version "3.5.2"
-  resolved "https://registry.npmjs.org/engine.io-client/-/engine.io-client-3.5.2.tgz"
+engine.io-client@~6.5.2:
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/engine.io-client/-/engine.io-client-6.5.4.tgz#b8bc71ed3f25d0d51d587729262486b4b33bd0d0"
   dependencies:
-    component-emitter "~1.3.0"
-    component-inherit "0.0.3"
-    debug "~3.1.0"
-    engine.io-parser "~2.2.0"
-    has-cors "1.1.0"
-    indexof "0.0.1"
-    parseqs "0.0.6"
-    parseuri "0.0.6"
-    ws "~7.4.2"
-    xmlhttprequest-ssl "~1.6.2"
-    yeast "0.1.2"
+    "@socket.io/component-emitter" "~3.1.0"
+    debug "~4.3.1"
+    engine.io-parser "~5.2.1"
+    ws "~8.17.1"
+    xmlhttprequest-ssl "~2.0.0"
 
-engine.io-parser@~2.2.0:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/engine.io-parser/-/engine.io-parser-2.2.1.tgz"
-  dependencies:
-    after "0.8.2"
-    arraybuffer.slice "~0.0.7"
-    base64-arraybuffer "0.1.4"
-    blob "0.0.5"
-    has-binary2 "~1.0.2"
+engine.io-parser@~5.2.1:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/engine.io-parser/-/engine.io-parser-5.2.2.tgz#37b48e2d23116919a3453738c5720455e64e1c49"
 
-engine.io@~3.5.0:
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/engine.io/-/engine.io-3.5.0.tgz"
+engine.io@~6.5.2:
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/engine.io/-/engine.io-6.5.5.tgz#430b80d8840caab91a50e9e23cb551455195fc93"
   dependencies:
+    "@types/cookie" "^0.4.1"
+    "@types/cors" "^2.8.12"
+    "@types/node" ">=10.0.0"
     accepts "~1.3.4"
     base64id "2.0.0"
     cookie "~0.4.1"
-    debug "~4.1.0"
-    engine.io-parser "~2.2.0"
-    ws "~7.4.2"
+    cors "~2.8.5"
+    debug "~4.3.1"
+    engine.io-parser "~5.2.1"
+    ws "~8.17.1"
 
 enhanced-resolve@^3.4.0:
   version "3.4.1"
@@ -6788,16 +6759,6 @@ has-bigints@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.1.tgz"
 
-has-binary2@~1.0.2:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/has-binary2/-/has-binary2-1.0.3.tgz"
-  dependencies:
-    isarray "2.0.1"
-
-has-cors@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/has-cors/-/has-cors-1.1.0.tgz"
-
 has-flag@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-2.0.0.tgz"
@@ -7148,10 +7109,6 @@ import-fresh@^3.0.0, import-fresh@^3.2.1:
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
-
-indexof@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/indexof/-/indexof-0.0.1.tgz"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -7534,10 +7491,6 @@ isarray@0.0.1:
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
-
-isarray@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/isarray/-/isarray-2.0.1.tgz"
 
 isexe@^2.0.0:
   version "2.0.0"
@@ -9065,14 +9018,6 @@ parse5@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/parse5/-/parse5-6.0.1.tgz"
 
-parseqs@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/parseqs/-/parseqs-0.0.6.tgz"
-
-parseuri@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/parseuri/-/parseuri-0.0.6.tgz"
-
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"
   resolved "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz"
@@ -9229,11 +9174,11 @@ portfinder@^1.0.26:
     debug "^3.1.1"
     mkdirp "^0.5.5"
 
-portscanner@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/portscanner/-/portscanner-2.1.1.tgz"
+portscanner@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/portscanner/-/portscanner-2.2.0.tgz#6059189b3efa0965c9d96a56b958eb9508411cf1"
   dependencies:
-    async "1.5.2"
+    async "^2.6.0"
     is-number-like "^1.0.3"
 
 posix-character-classes@^0.1.0:
@@ -9640,10 +9585,6 @@ qs@6.11.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.0.tgz#fd0d963446f7a65e1367e01abd85429453f0c37a"
   dependencies:
     side-channel "^1.0.4"
-
-qs@6.2.3:
-  version "6.2.3"
-  resolved "https://registry.npmjs.org/qs/-/qs-6.2.3.tgz"
 
 qs@6.7.0:
   version "6.7.0"
@@ -10150,12 +10091,6 @@ rx@4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/rx/-/rx-4.1.0.tgz"
 
-rxjs@^5.5.6:
-  version "5.5.12"
-  resolved "https://registry.npmjs.org/rxjs/-/rxjs-5.5.12.tgz"
-  dependencies:
-    symbol-observable "1.0.1"
-
 rxjs@^6.6.0:
   version "6.6.7"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
@@ -10574,52 +10509,40 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-socket.io-adapter@~1.1.0:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/socket.io-adapter/-/socket.io-adapter-1.1.2.tgz"
-
-socket.io-client@2.4.0, socket.io-client@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/socket.io-client/-/socket.io-client-2.4.0.tgz"
+socket.io-adapter@~2.5.2:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/socket.io-adapter/-/socket.io-adapter-2.5.5.tgz#c7a1f9c703d7756844751b6ff9abfc1780664082"
   dependencies:
-    backo2 "1.0.2"
-    component-bind "1.0.0"
-    component-emitter "~1.3.0"
-    debug "~3.1.0"
-    engine.io-client "~3.5.0"
-    has-binary2 "~1.0.2"
-    indexof "0.0.1"
-    parseqs "0.0.6"
-    parseuri "0.0.6"
-    socket.io-parser "~3.3.0"
-    to-array "0.1.4"
+    debug "~4.3.4"
+    ws "~8.17.1"
 
-socket.io-parser@~3.3.0:
-  version "3.3.2"
-  resolved "https://registry.npmjs.org/socket.io-parser/-/socket.io-parser-3.3.2.tgz"
+socket.io-client@^4.4.1:
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.7.5.tgz#919be76916989758bdc20eec63f7ee0ae45c05b7"
   dependencies:
-    component-emitter "~1.3.0"
-    debug "~3.1.0"
-    isarray "2.0.1"
+    "@socket.io/component-emitter" "~3.1.0"
+    debug "~4.3.2"
+    engine.io-client "~6.5.2"
+    socket.io-parser "~4.2.4"
 
-socket.io-parser@~3.4.0:
-  version "3.4.1"
-  resolved "https://registry.npmjs.org/socket.io-parser/-/socket.io-parser-3.4.1.tgz"
+socket.io-parser@~4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-4.2.4.tgz#c806966cf7270601e47469ddeec30fbdfda44c83"
   dependencies:
-    component-emitter "1.2.1"
-    debug "~4.1.0"
-    isarray "2.0.1"
+    "@socket.io/component-emitter" "~3.1.0"
+    debug "~4.3.1"
 
-socket.io@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/socket.io/-/socket.io-2.4.0.tgz"
+socket.io@^4.4.1:
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/socket.io/-/socket.io-4.7.5.tgz#56eb2d976aef9d1445f373a62d781a41c7add8f8"
   dependencies:
-    debug "~4.1.0"
-    engine.io "~3.5.0"
-    has-binary2 "~1.0.2"
-    socket.io-adapter "~1.1.0"
-    socket.io-client "2.4.0"
-    socket.io-parser "~3.4.0"
+    accepts "~1.3.4"
+    base64id "~2.0.0"
+    cors "~2.8.5"
+    debug "~4.3.2"
+    engine.io "~6.5.2"
+    socket.io-adapter "~2.5.2"
+    socket.io-parser "~4.2.4"
 
 sockjs@^0.3.24:
   version "0.3.24"
@@ -11054,10 +10977,6 @@ swarm-js@^0.1.40:
     tar "^4.0.2"
     xhr-request "^1.0.1"
 
-symbol-observable@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/symbol-observable/-/symbol-observable-1.0.1.tgz"
-
 table@^5.2.3:
   version "5.4.6"
   resolved "https://registry.npmjs.org/table/-/table-5.4.6.tgz"
@@ -11126,13 +11045,6 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
 
-tfunk@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/tfunk/-/tfunk-4.0.0.tgz"
-  dependencies:
-    chalk "^1.1.3"
-    dlv "^1.1.3"
-
 thenify-all@^1.0.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/thenify-all/-/thenify-all-1.6.0.tgz"
@@ -11200,10 +11112,6 @@ tmp@^0.0.33:
   resolved "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz"
   dependencies:
     os-tmpdir "~1.0.2"
-
-to-array@0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/to-array/-/to-array-0.1.4.tgz"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -11349,9 +11257,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
 
-ua-parser-js@^0.7.28:
-  version "0.7.28"
-  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.28.tgz"
+ua-parser-js@^1.0.33:
+  version "1.0.38"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.38.tgz#66bb0c4c0e322fe48edfe6d446df6042e62f25e2"
 
 uglify-es@^3.3.4:
   version "3.3.9"
@@ -11406,6 +11314,10 @@ unbox-primitive@^1.0.1:
     has-bigints "^1.0.1"
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
+
+undici-types@~5.26.4:
+  version "5.26.5"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -12239,14 +12151,6 @@ wrap-ansi@^5.1.0:
     string-width "^3.0.0"
     strip-ansi "^5.0.0"
 
-wrap-ansi@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz"
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
@@ -12265,7 +12169,7 @@ write@1.0.3:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@7.4.6, ws@~7.4.2:
+ws@7.4.6:
   version "7.4.6"
   resolved "https://registry.npmjs.org/ws/-/ws-7.4.6.tgz"
 
@@ -12290,6 +12194,10 @@ ws@^7.3.1:
 ws@^8.13.0:
   version "8.17.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.17.0.tgz#d145d18eca2ed25aaf791a183903f7be5e295fea"
+
+ws@~8.17.1:
+  version "8.17.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.17.1.tgz#9293da530bb548febc95371d90f9c878727d919b"
 
 xhr-request-promise@^0.1.2:
   version "0.1.3"
@@ -12324,9 +12232,9 @@ xhr@^2.0.4, xhr@^2.2.0, xhr@^2.3.3:
     parse-headers "^2.0.0"
     xtend "^4.0.0"
 
-xmlhttprequest-ssl@~1.6.2:
-  version "1.6.3"
-  resolved "https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.6.3.tgz"
+xmlhttprequest-ssl@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.0.0.tgz#91360c86b914e67f44dce769180027c0da618c67"
 
 xmlhttprequest@1.8.0:
   version "1.8.0"
@@ -12381,13 +12289,6 @@ yargs-parser@^13.1.0:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^18.1.2:
-  version "18.1.3"
-  resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-18.1.3.tgz"
-  dependencies:
-    camelcase "^5.0.0"
-    decamelize "^1.2.0"
-
 yargs-parser@^2.4.1:
   version "2.4.1"
   resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-2.4.1.tgz"
@@ -12398,6 +12299,10 @@ yargs-parser@^2.4.1:
 yargs-parser@^20.2.2:
   version "20.2.9"
   resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz"
+
+yargs-parser@^21.1.1:
+  version "21.1.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
 
 yargs-parser@^7.0.0:
   version "7.0.0"
@@ -12433,21 +12338,17 @@ yargs@16.2.0, yargs@^16.0.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
-yargs@^15.4.1:
-  version "15.4.1"
-  resolved "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz"
+yargs@^17.3.1:
+  version "17.7.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.7.2.tgz#991df39aca675a192b816e1e0363f9d75d2aa269"
   dependencies:
-    cliui "^6.0.0"
-    decamelize "^1.2.0"
-    find-up "^4.1.0"
-    get-caller-file "^2.0.1"
+    cliui "^8.0.1"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
     require-directory "^2.1.1"
-    require-main-filename "^2.0.0"
-    set-blocking "^2.0.0"
-    string-width "^4.2.0"
-    which-module "^2.0.0"
-    y18n "^4.0.0"
-    yargs-parser "^18.1.2"
+    string-width "^4.2.3"
+    y18n "^5.0.5"
+    yargs-parser "^21.1.1"
 
 yargs@^4.7.1:
   version "4.8.1"
@@ -12494,10 +12395,6 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
-
-yeast@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/yeast/-/yeast-0.1.2.tgz"
 
 yorkie@^2.0.0:
   version "2.0.0"
